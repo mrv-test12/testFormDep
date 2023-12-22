@@ -6,7 +6,7 @@
     "setup": "npm install && vue-cli-service lint --fix",
     "lint": "vue-cli-service lint",
     "fix": "eslint --fix .",
-    "build:web": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build --mode production.web --env.production --env.web",
+    "build:web": "vue-cli-service lint --fix && export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build --mode production.web --env.production --env.web",
     "serve:web": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve --mode development.web --env.development --env.web",
     "setup-webpack-config": "node ./node_modules/vue-cli-plugin-vuexp/lib/scripts/webpack-maintenance pre",
     "version-check": "vue -V && nativescript --version && pod --version && npm -v && node -v && tns --version && xcodebuild -version",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "lodash-es": "4.17.21",
-    "nucal-widget-lib": "0.13.50",
+    "nucal-widget-lib": "0.13.51",
     "vue": "2.7.15",
     "vue-router": "3.6.5",
     "vuex": "3.6.2",
